@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tiechui1994/gopdf/core"
+	"github.com/cindoralla/gopdf/core"
 )
 
 type Image struct {
@@ -32,15 +32,35 @@ func NewImageWithWidthAndHeight(path string, width, height float64, pdf *core.Re
 	}
 
 	var temppath []string
+	var tempDir string = os.TempDir()
 	if _, err := os.Stat(path); err != nil {
-		path = fmt.Sprintf("/tmp/%v.png", time.Now().Unix())
+		path = fmt.Sprintf("%s/%v.png", tempDir, time.Now().Unix())
 		temppath = append(temppath, path)
 		DrawPNG(path)
 	}
 
-	dstPath := fmt.Sprintf("/tmp/%v.jpeg", time.Now().UnixNano())
 	srcPath, _ := filepath.Abs(path)
-	Convert2JPEG(srcPath, dstPath)
+
+	// if the file is png format, do not change to jpeg, otherwise, change it to jpeg
+	var dstPath string
+	fd, _ := os.Open(srcPath)
+	_, pictureType, _ := image.DecodeConfig(fd)
+	switch pictureType {
+	case PNG:
+		dstPath = fmt.Sprintf("%s/%v.png", tempDir, time.Now().UnixNano())
+
+		input, _ := ioutil.ReadFile(srcPath)
+		ioutil.WriteFile(dstPath, input, 0644)
+
+		//destination, _ := os.Create(dstPath)
+		//io.Copy(destination, fd)
+		//destination.Seek(0, 0)
+
+	default:
+		dstPath = fmt.Sprintf("%s/%v.jpeg", tempDir, time.Now().UnixNano())
+		Convert2JPEG(srcPath, dstPath)
+	}
+
 	temppath = append(temppath, dstPath)
 
 	image := &Image{
