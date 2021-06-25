@@ -2,7 +2,7 @@ package example
 
 import (
 	"fmt"
-	"github.com/tiechui1994/gopdf/core"
+	"github.com/cindoralla/gopdf/core"
 	"testing"
 )
 
