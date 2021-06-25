@@ -1,12 +1,14 @@
 ## gopdf
 
-![GitHub](https://img.shields.io/github/v/release/tiechui1994/gopdf)
-![GitHub](https://img.shields.io/github/commit-activity/w/tiechui1994/gopdf)
-![GitHub](https://img.shields.io/github/license/tiechui1994/gopdf)
-![GitHub issues](https://img.shields.io/github/issues/tiechui1994/gopdf)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/tiechui1994/gopdf)
+![GitHub](https://img.shields.io/github/v/release/cindoralla/gopdf)
+![GitHub](https://img.shields.io/github/commit-activity/w/cindoralla/gopdf)
+![GitHub](https://img.shields.io/github/license/cindoralla/gopdf)
+![GitHub issues](https://img.shields.io/github/issues/cindoralla/gopdf)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cindoralla/gopdf)
 
 ## 项目介绍
+
+本项目是在 https://github.com/tiechui1994/gopdf 的基础上进行的二次开发
 
 gopdf 是一个生成 `PDF` 文档的 `Golang` 库. 主要有以下的特点:
 
@@ -21,7 +23,7 @@ gopdf 是一个生成 `PDF` 文档的 `Golang` 库. 主要有以下的特点:
 ## 安装
 
 ```
-go get -u github.com/tiechui1994/gopdf
+go get -u github.com/cindoralla/gopdf
 ```
 
 ## 案例展示: 
