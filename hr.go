@@ -1,7 +1,7 @@
 package gopdf
 
 import (
-	"github.com/tiechui1994/gopdf/core"
+	"github.com/cindoralla/gopdf/core"
 )
 
 type HLine struct {
