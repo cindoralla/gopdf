@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/tiechui1994/gopdf/core"
-	"github.com/tiechui1994/gopdf/lex"
+	"github.com/cindoralla/gopdf/core"
+	"github.com/cindoralla/gopdf/lex"
 )
 
 func init() {
