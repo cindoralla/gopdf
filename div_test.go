@@ -4,7 +4,7 @@ import (
 	"testing"
 	"strings"
 
-	"github.com/tiechui1994/gopdf/core"
+	"github.com/cindoralla/gopdf/core"
 )
 
 const (
