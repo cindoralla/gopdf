@@ -1,9 +1,11 @@
 package gopdf
 
 import (
+	"fmt"
+	"image"
+	"io/ioutil"
 	"os"
 	"path/filepath"
-	"fmt"
 	"time"
 
 	"github.com/cindoralla/gopdf/core"
